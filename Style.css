@@ -215,6 +215,10 @@ header{
     min-width: 100%;
   }
 
+  .home-head h1{
+    font-size: 1.3rem;
+  }
+
 .ima-box img{
   max-width: 100%;
 }
@@ -233,7 +237,6 @@ padding-top: 3%;
  flex-grow: 1;
  flex-wrap: wrap;
 }
-/* 
 
 .service-item img{
   width: 200px;
@@ -252,7 +255,7 @@ padding-top: 3%;
 
 
  
-} */
+} 
 }
 
 /* Home Page */
@@ -548,7 +551,7 @@ padding-top: 3%;
 /* Responsive styling */
 
 
-@media (max-width: 762px) {
+@media (max-width: 768px) {
   .service-container .container-item{
     display: flex;
     flex-wrap: wrap;
@@ -565,7 +568,13 @@ padding-top: 3%;
   row-gap: 20px;
   padding-top: 8%;
 }
+.home-head h1>span{
+  font-size: 1.4rem;
+}
 
+.home-head h1{
+  font-size: 2.4rem;
+}
 }
 
 
