@@ -1,49 +1,29 @@
-function toggleMenu() {
-    var navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('active');
-  }
 
-  
-  let currentIndex = 0;
+  function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active');
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.carousel-item');
-    if (index >= slides.length) {
-        currentIndex = 0;
-    } else if (index < 0) {
-        currentIndex = slides.length - 1;
-    } else {
-        currentIndex = index;
-    }
-    const offset = -currentIndex * 100;
-    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
 }
 
-function nextSlide() {
-    showSlide(currentIndex + 1);
-}
-
-function prevSlide() {
-    showSlide(currentIndex - 1);
-}
-
-setInterval(nextSlide, 3000); // Change slide every 3 seconds
-
-
-let year = document.querySelector("#year");
-
-$(document).ready(function () {
-  year.innerText = new Date().getFullYear();
+// MouseOver
+const homeBtn = document.querySelector('.home-btn');
+homeBtn.addEventListener('mouseover', event => {
+    event.target.style.backgroundColor = '#b43041';
+    event.target.textContent = 'Contact Us🤙';
 });
 
-function MyView(){
-    alert("Hello, World!");
-
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const button = document.getElementById('view');
-    button.onclick = function () {
-        alert("Button clicked!");
-    };
+homeBtn.addEventListener('mouseout', event => {
+    event.target.style.backgroundColor = '#cb4154';
+    event.target.textContent = 'Lets talk🥰';
 });
+
+
+homeBtn.addEventListener('click', event => {
+    event.target.style.backgroundColor = '#131d3b';
+    event.target.textContent = 'OUCH! 😜';
+   setTimeout( function(){
+    alert('Thanks for reaching Us!')
+    window.location.href = 'https://wa.me/+231775528982?text=How%20can%20we%20help%20you?';
+   }, 2000)
+});
+
